@@ -1,6 +1,4 @@
-package edu.dosw.taller.model;
-
-import edu.dosw.taller.model.entities.Task;
+package edu.dosw.taller.model.entities;
 
 import java.time.LocalDateTime;
 
