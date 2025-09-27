@@ -10,11 +10,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>edu.dosw.taller</groupId>
-    <artifactId>Taller2_DOSW</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Taller2_DOSW</name>
-    <description>Taller evaluativo corte 2</description>
+	<groupId>edu.dosw.taller</groupId>
+	<artifactId>Taller2_DOSW</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Taller2_DOSW</name>
+	<description>Taller evaluativo corte 2</description>
 
     <properties>
         <java.version>17</java.version>
@@ -227,3 +227,4 @@
         </pluginRepository>
     </pluginRepositories>
 </project>
+
