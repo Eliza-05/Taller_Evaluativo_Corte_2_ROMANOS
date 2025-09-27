@@ -53,13 +53,16 @@ El backend sigue la **arquitectura Modelo–Vista–Controlador (MVC)**. La estr
 ```
 📁 src/main/java/edu/dosw/taller/
 │
-├── 📁 configs/          # ⚙️ Configuraciones globales (Swagger, seguridad, etc.)
-├── 📁 controller/       # 🌐 Controladores REST (exposición de endpoints)
-├── 📁 model/           # 📊 Entidades y modelos de datos
-├── 📁 persistence/     # 🗄️ Repositorios (interfaces con la BD MongoDB)
-├── 📁 services/        # 🔧 Servicios con la lógica de negocio
-├── 📁 utils/           # 🛠️ Utilidades comunes
-└── 📄 Application.java  # 🚀 Clase principal Spring Boot
+├── 📁 configs/               # ⚙️ Configuraciones globales (Swagger, seguridad, etc.)
+├── 📁 controller/            # 🌐 Controladores REST (exposición de endpoints)
+├── 📁 model/                 # 📊 Módulo de modelos y lógica base
+│   ├── 📁 components/        # 🧩 Componentes adicionales (clases auxiliares)
+│   ├── 📁 entities/          # 📝 Entidades de dominio (Task, User, etc.)
+│   ├── 📁 persistence/       # 🗄️ Persistencia y acceso a datos
+│   │   └── 📁 repository/    # 🔗 Interfaces con la BD (MongoDB Repositories)
+│   └── 📁 services/          # 🔧 Servicios dentro de la capa de modelo
+
+
 ``` 
 
 ### 📋 Descripción de capas:
