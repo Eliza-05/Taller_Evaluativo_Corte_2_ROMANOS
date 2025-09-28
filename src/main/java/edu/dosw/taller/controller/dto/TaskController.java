@@ -28,7 +28,10 @@ public class TaskController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody TaskCreateDTO dto) {
-        service.createTask(dto);
+        service.createTask(dto.getTitle(),
+                dto.getDescription(),
+                dto.getDate(),
+                dto.getCreator());
     }
 
     /**
