@@ -1,5 +1,7 @@
-package edu.dosw.taller.controller.dto;
-import edu.dosw.taller.model.entities.Task;
+package edu.dosw.taller.controller;
+import edu.dosw.taller.controller.dto.TaskCreateDTO;
+import edu.dosw.taller.controller.dto.TaskResponseDTO;
+import edu.dosw.taller.controller.dto.TaskUpdateStatusDTO;
 import edu.dosw.taller.model.entities.TaskStatus;
 import edu.dosw.taller.model.services.TaskService;
 import org.springframework.http.HttpStatus;
