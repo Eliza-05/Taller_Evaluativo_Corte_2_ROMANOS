@@ -26,6 +26,15 @@ public abstract class Task {
     @Field
     private TaskStatus status;
 
+    /**
+     * Protected constructor for creating a new task with specified parameters.
+     * Automatically generates a unique ID and sets initial status to PENDING.
+     *
+     * @param title the title of the task
+     * @param description detailed description of the task
+     * @param date the date and time associated with the task
+     * @param creator the username of the task creator
+     */
     protected Task(String title, String description, LocalDateTime date, String creator) {
         this.id = UUID.randomUUID().toString();
         this.title = title;
@@ -35,5 +44,8 @@ public abstract class Task {
         this.status = TaskStatus.PENDING;
     }
 
+    /**
+     * Default protected constructor for framework use (MongoDB).
+     */
     protected Task() {}
 }
