@@ -84,10 +84,10 @@ El backend sigue la **arquitectura Modelo–Vista–Controlador (MVC)**. La estr
 Para la documentación y análisis del proyecto se generaron los siguientes diagramas UML:
 
 - **Diagrama de Componentes Especifico**  
-  ![D.Componentes](docs/imagenes/Diagrama%20de%20Componentes%20Especifico.png)
+  ![D.Componentes](docs/uml/Diagrama%20de%20Componentes%20Especifico.png)
 
 - **Diagrama de Clases**  
-  ![D.Clases](docs/imagenes/Diagrama%20de%20Clases.png)
+  ![D.Clases](docs/uml/Diagrama%20de%20Clases.png)
 
 
 
