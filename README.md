@@ -83,10 +83,10 @@ El backend sigue la **arquitectura Modelo–Vista–Controlador (MVC)**. La estr
 
 Para la documentación y análisis del proyecto se generaron los siguientes diagramas UML:
 
-- **Diagrama de Componentes Especifico**  
+- ### **Diagrama de Componentes Especifico**  
   ![D.Componentes](docs/uml/Diagrama%20de%20Componentes%20Especifico.png)
 
-- **Diagrama de Clases**  
+- ### **Diagrama de Clases**  
   ![D.Clases](docs/uml/Diagrama%20de%20Clases.png)
 
 ---
@@ -99,9 +99,11 @@ Para la documentación y análisis del proyecto se generaron los siguientes diag
 ### 🟡 POST: 
 
 Entrada:
+
  ![Entrada Post](docs/imagenes/post_entrada.png)
 
 Salida:
+
  ![Salida Post](docs/imagenes/post_salida.png)
 
 ---
@@ -109,9 +111,11 @@ Salida:
 ### 🟠 GET /tasks/search:
 
 Entrada:
+
 ![Entrada Get](docs/imagenes/get_entrada.png)
 
 Salida:
+
 ![Salida Get](docs/imagenes/get_salida.png)
 
 ---
@@ -119,6 +123,7 @@ Salida:
 ### 🔴 DELETE
 
 Entrada:
+
 ![Entrada Delete](docs/imagenes/delete1.png)
 
 Proceso:
@@ -126,17 +131,45 @@ Proceso:
 ![Proceso Delete](docs/imagenes/delete2.png)
 
 Salida:
+
 ![Salida Delete](docs/imagenes/delete3.png)
 
 ---
 
-## 📌 Solución que sigue los principios SOLID
+## 🧩 Solución que sigue los principios SOLID
+
+En la implementación del **Gestor de Tareas Colaborativo**, se aplicaron los principios **SOLID** de la siguiente manera:
+
+### 1️⃣ S
+Cada clase cumple una única responsabilidad:
+- **TaskController** se encarga únicamente de las peticiones HTTP.
+- Los **DTOs** encapsulan los datos de entrada y salida sin lógica adicional.
+- **TaskRepository** se encarga únicamente de las consultas para poder acceder a **MongoDB**.
+- Las clases encargadas del filtrado (FilterDateStrategy, FilterStatusStrategy, FilterKeyWordStrategy) implementan la lógica de negocio correspondiente.
+
+### 2️⃣ O
+El sistema está abierto a la extensión, pero cerrado a la modificación:
+- Las clases de filtrado (FilterDateStrategy, FilterStatusStrategy, FilterKeyWordStrategy) implementan la interfaz **FilterStrategy**. Para añadir un nuevo filtro, simplemente se crear una nueva clase que implemente la interfaz. Así no toca modificar las clases que ya existe :)
+- Con el patrón **Factory** (TaskFactory, BasicTaskFactory) se pueden crear diferentes tipos de tareas sin modificar la lógica que ya existe.
+
+### 3️⃣ L
+- **BasicTask** y **Task** cumplen este principio, ya que, cualquier lugar que requiera un **Task** puede funcionar correctamente con una instancia de **BasicTask**.
+- Las implementaciones de **FilterStrategy** se pueden intercambiar, lo que garantiza el correcto funcionamiento de los filtros sin afectar al cliente que las usa.
+
+### 4️⃣ I
+- La interfaz **FilterStrategy** es simple y específica, ya que, solo obliga a implementar el método necesario para realizar el filtrado, sin métodos innecesarios de más.
+
+### 5️⃣ D
+- El controlador y los servicios dependen únicamente de **abstracciones** en lugar de implementaciones concretas.
+- **TaskController** delega la lógica a los servicios, y estos dependen de la interfaz **FilterStrategy**. Esto ayuda a desacoplar el sistema y a permitir la extensibilidad del mismo.
 
 ---
 
 ## 🥥 JaCOCO
 
 ![JaCOCO](docs/imagenes/jacoco.png)
+
+---
 
 ## 🐋 SonarQube
 
