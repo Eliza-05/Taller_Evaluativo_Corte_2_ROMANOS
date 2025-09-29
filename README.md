@@ -89,6 +89,48 @@ Para la documentación y análisis del proyecto se generaron los siguientes diag
 - **Diagrama de Clases**  
   ![D.Clases](docs/uml/Diagrama%20de%20Clases.png)
 
+---
+
+## 😎 Swagger
+### **Link del swagger**: http://localhost:8080/swagger-ui/index.html
+
+---
+
+### 🟡 POST: 
+
+Entrada:
+ ![Entrada Post](docs/imagenes/post_entrada.png)
+
+Salida:
+ ![Salida Post](docs/imagenes/post_salida.png)
+
+---
+
+### 🟠 GET /tasks/search:
+
+Entrada:
+![Entrada Get](docs/imagenes/get_entrada.png)
+
+Salida:
+![Salida Get](docs/imagenes/get_salida.png)
+
+---
+
+### 🔴 DELETE
+
+Entrada:
+![Entrada Delete](docs/imagenes/delete1.png)
+
+Proceso:
+
+![Proceso Delete](docs/imagenes/delete2.png)
+
+Salida:
+![Salida Delete](docs/imagenes/delete3.png)
+
+---
+
+## 📌 Solución que sigue los principios SOLID
 
 
 
