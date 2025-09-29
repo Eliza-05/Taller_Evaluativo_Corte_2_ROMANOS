@@ -132,6 +132,17 @@ Salida:
 
 ## 📌 Solución que sigue los principios SOLID
 
+---
+
+## 🥥 JaCOCO
+
+![JaCOCO](docs/imagenes/jacoco.png)
+
+## 🐋 SonarQube
+
+![SonarQube](docs/imagenes/sonar.png)
+
+
 
 
 
