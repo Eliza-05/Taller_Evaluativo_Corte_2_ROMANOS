@@ -137,7 +137,6 @@ Salida:
 ---
 
 ## 🧩 Solución que sigue los principios SOLID
-
 En la implementación del **Gestor de Tareas Colaborativo**, se aplicaron los principios **SOLID** de la siguiente manera:
 
 ### 1️⃣ S
